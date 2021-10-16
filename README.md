@@ -1,20 +1,26 @@
-# :fire: TIL Repository
+# 📚 TIL Repository
 
->   by Sanghyun
-
-
+>   a repository for storing concepts I studied
 
 <br>
 
+## 📂 Contents
+
+<br>
+
+#### 001. Django
+
+<br>
+
+#### 002. Database
+
+<br>
+
+#### 003. Algorithms :fire:
+
+>   problem solving
 
 
-##### 📂 Contents
 
->   *   Python
->   *   Java
->   *   HTML / CSS
->       *   Bootstrap
->   *   Django
->   *   DB
->   *   Algorithm
+1.   Dijkstra
 
