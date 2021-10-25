@@ -23,6 +23,13 @@ import heapq
 
 
 def Dijkstra(s):
+    """
+    시작 정점에서 목적 정점까지의 최소 비용(거리) 계산
+        * 음의 가중치를 허용 하지 않음
+        * 추가 학습
+            1. Bellman-Ford algorithm (음의 가중치 허용)
+            2. Floyd-Warshall algorithm (모든 정점에 대한 최소 비용(거리) 계산)
+    """
     hq = []
     heapq.heappush(hq, (0, s))  # cost, node idx
 
