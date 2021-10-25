@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from .secret import MY_KEY
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0ne3l_m1pu+7bo6-t7s))ned14%8ea5y-1d=!@&#i8qe&%p-$x'
+SECRET_KEY = MY_KEY['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -33,9 +34,11 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # my apps
     'articles',
-    'accounts',
 
     # 3rd-party apps
+    'django_seed',
+    'django_extensions',
+    'rest_framework',
 
     # Django default apps
     'django.contrib.admin',
@@ -61,7 +64,7 @@ ROOT_URLCONF = 'comp_prac.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,13 +113,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'  # 언어 설정, USE_I18N 값이 True이어야 적용 가능
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'Asia/Seoul'  # DB 타임존 설정, USE_TZ 값이 True이어야 에러가 발생하지 않음
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
-USE_L10N = True  # 날짜/시간 지역 서식 적용 여부
+USE_L10N = True
 
 USE_TZ = True
 
