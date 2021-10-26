@@ -5,6 +5,10 @@
 # SECRET KEY 숨기기
 comp_prac/secret.py
 
+# Practice File 숨기기
+prac_check_requests.py
+articles/prac_views.py
+
 *.log
 *.pot
 *.pyc
